@@ -1,0 +1,16 @@
+<div class="container">
+  <ul>
+    <li (click)="state = 'example1'">
+      Example 1
+    </li>
+    <li (click)="state = 'example2'">
+      Example 2
+    </li>
+    <li (click)="state = 'example3'">
+      Example 3
+    </li>
+  </ul>
+  <app-example1 *ngIf="state === 'example1'"></app-example1>
+  <app-example2 *ngIf="state === 'example2'"></app-example2>
+  <app-example3 *ngIf="state === 'example3'"></app-example3>
+</div>

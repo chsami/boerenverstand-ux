@@ -1,0 +1,25 @@
+<app-loader *ngIf="isLoading"></app-loader>
+<div class="loader-container">
+  <div>
+    <a class="waves-effect waves-light btn" (click)="loadDataTheBadWay()"
+      >Bad way</a
+    >
+  </div>
+
+  <div>
+    <a class="waves-effect waves-light btn" [class.disabled]="isLoading" (click)="loadDataTheGoodWay()" 
+      >Good way</a
+    >
+  </div>
+  <div>
+    <a class="waves-effect waves-light btn" (click)="reset()">Reset</a>
+  </div>
+</div>
+
+<div *ngIf="data?.length > 0">
+  <ul>
+    <li *ngFor="let item of data">
+      item
+    </li>
+  </ul>
+</div>
